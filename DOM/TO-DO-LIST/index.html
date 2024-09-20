@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>Make your list</h1>
+    <input id="inp" type="text" placeholder="Enter your item">
+    <button id="btn">Add me</button>
+
+    <div id="my-container"></div>
+
+    <script>
+        const button = document.getElementById('btn');
+        const container = document.getElementById('my-container');
+
+        button.addEventListener('click',()=>{
+            const val = document.getElementById('inp');
+            const ele = document.createElement('li');
+            ele.innerText = val.value
+            container.appendChild(ele);
+            val.value=''
+        })
+    </script>
+</body>
+</html>
